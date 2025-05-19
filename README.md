@@ -42,27 +42,19 @@ options:
 ### Decryption
 
 ```
- ./void_scribe.py  --help
-usage: void_scribe.py [-h] [--encrypt] [--send] [--delete-local]
-                      [--server SERVER] [--remote-path REMOTE_PATH]
-                      [--verbose]
+./void_key.py --help
+usage: void_key.py [-h] file
 
-Void Scribe: Concealed text editor with optional encryption and
-remote sending.
+Void Key: Decrypt .enc files created
+by Void Scribe (AES-GCM with SHA-256
+key).
+
+positional arguments:
+  file        Path to the encrypted
+              .enc file
 
 options:
-  -h, --help            show this help message and exit
-  --encrypt             Encrypt the content before saving.
-  --send                Send the saved file to a remote server via
-                        SCP.
-  --delete-local        Delete the local file after saving (and
-                        sending if enabled).
-  --server SERVER       Remote server address for sending (required
-                        if --send).
-  --remote-path REMOTE_PATH
-                        Remote path on server to save the file
-                        (default: home directory).
-  --verbose             Enable verbose output.
+  -h, --help  show this help message
 ``` 
 
 ---
